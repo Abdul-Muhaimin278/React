@@ -102,6 +102,12 @@ export default function Todo() {
 			</nav>
 
 			<TodoForm onAddTodo={HandleFormSubmit} />
+			<div className="d-flex justify-content-center">
+				<button className="btn btn-primary" onClick={HandleClearTodoData}>
+					Clear all
+				</button>
+			</div>
+
 			<section className="container">
 				{task.map((curTask, i) => {
 					return (
@@ -119,12 +125,6 @@ export default function Todo() {
 					);
 				})}
 			</section>
-
-			<div className="d-flex justify-content-center">
-				<button className="btn btn-primary" onClick={HandleClearTodoData}>
-					Clear all
-				</button>
-			</div>
 		</>
 	);
 }

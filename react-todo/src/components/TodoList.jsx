@@ -123,6 +123,7 @@ const TodoList = ({
 									<input
 										id="check"
 										type="checkbox"
+										checked={curElem.checked}
 										name="check"
 										onClick={() => handleCheckedTodo(index)}
 									/>
