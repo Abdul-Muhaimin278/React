@@ -1,8 +1,12 @@
 import "./App.css";
-import { HowNotToFetchApi } from "./components/Hooks/useEffect/HowNotToFetchApi";
+import { DarkLight, ThemeProvider } from "./Hooks/ContextAPI/DarkLightTheme";
 
 function App() {
-  return <HowNotToFetchApi></HowNotToFetchApi>;
+  return (
+    <ThemeProvider>
+      <DarkLight />
+    </ThemeProvider>
+  );
 }
 
 export default App;
