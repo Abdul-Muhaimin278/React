@@ -1,12 +1,7 @@
-import "./App.css";
-import { DarkLight, ThemeProvider } from "./Hooks/ContextAPI/DarkLightTheme";
+import { ReducerComp } from "./Hooks/UseReducer";
 
 function App() {
-  return (
-    <ThemeProvider>
-      <DarkLight />
-    </ThemeProvider>
-  );
+  return <ReducerComp />;
 }
 
 export default App;
