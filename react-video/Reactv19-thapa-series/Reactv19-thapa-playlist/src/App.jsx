@@ -1,7 +1,7 @@
-import { ReducerComp } from "./Hooks/UseReducer";
+import { ReactMemo } from "./Hooks/Memo/ReactMemo";
 
 function App() {
-  return <ReducerComp />;
+  return <ReactMemo />;
 }
 
 export default App;
