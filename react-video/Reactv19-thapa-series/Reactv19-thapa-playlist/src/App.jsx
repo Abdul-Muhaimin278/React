@@ -1,7 +1,7 @@
-import { ReactMemo } from "./Hooks/Memo/ReactMemo";
+import CallBack from "./Hooks/Memo/UseCallback";
 
 function App() {
-  return <ReactMemo />;
+  return <CallBack />;
 }
 
 export default App;

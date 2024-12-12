@@ -2,7 +2,6 @@ import { useMemo, useState } from "react";
 
 // eslint-disable-next-line react/display-name
 const ExpensiveComponent = () => {
-  //   Expensive calculation function
   const sum = () => {
     console.log("Calculating sum...");
     let i = 0;
@@ -13,8 +12,7 @@ const ExpensiveComponent = () => {
   };
 
   const total = useMemo(() => sum(), []);
-
-  //   const total = sum();
+  // const total = sum();
 
   return <p> sum: {total} </p>;
 };
@@ -27,7 +25,7 @@ const MemoParentComponent = () => {
       <ExpensiveComponent />
       <button
         onClick={() => setCount(count + 1)}
-        className="py-3 px-6 bg-cyan-400 rounded-sm"
+        className="py-3 px-6 bg-cyan-500 rounded-sm"
       >
         Re-render Parent
       </button>
