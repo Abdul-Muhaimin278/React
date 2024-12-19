@@ -1,8 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Card.css";
 
 export const Card = ({ curMovie }) => {
-  const { Poster, imdbID } = curMovie;
+  const { Poster, imdbID, Title, Year } = curMovie;
+  console.log(curMovie);
 
   return (
     <li className="hero-container">
@@ -12,9 +13,11 @@ export const Card = ({ curMovie }) => {
         </div>
         <div className="ticket-container">
           <div className="ticket__content">
-            <NavLink to={`/movie/${imdbID}`}>
+            <h4 className="margin-bottom">Name: {Title}</h4>
+            <h4 className="margin-bottom">Released: {Year}</h4>
+            <Link to={`/movie/${imdbID}`}>
               <button className="ticket__buy-btn">Watch now</button>
-            </NavLink>
+            </Link>
           </div>
         </div>
       </div>

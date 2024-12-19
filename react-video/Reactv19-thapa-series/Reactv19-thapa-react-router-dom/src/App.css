@@ -349,13 +349,16 @@ main .section-hero {
 /*------------------------------
 /* Movie Card Details */
 /* ---------------------------- */
+.movie-section {
+  width: 100%;
+  display: flex;
+  margin-top: 3.2rem !important;
+}
 .movie {
-  /* max-width: 100%; */
   width: 60rem;
   border-radius: 5px;
   display: flex;
   box-shadow: 0 5px 20px 10px rgba(0, 0, 0, 0.2);
-  /* overflow: hidden; */
 }
 
 .movie__hero {
@@ -373,19 +376,6 @@ main .section-hero {
   padding: 35px 30px;
   display: flex;
   flex-direction: column;
-}
-
-.movie__price {
-  background: linear-gradient(to bottom, #a9c9ff 0%, #ffbbec 100%);
-  flex: 0 0 50px;
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: rgb(255, 255, 255);
-  writing-mode: vertical-lr;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .movie__title {
@@ -406,7 +396,7 @@ main .section-hero {
 
 .movie__tag {
   font-size: 10px;
-  color: #fff;
+  color: #000;
   padding: 2px 7px;
   border-radius: 100px;
   margin-right: 8px;
