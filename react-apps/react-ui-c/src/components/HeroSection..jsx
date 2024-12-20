@@ -11,7 +11,7 @@ function HeroSection() {
         </div>
         <div className="col-lg-6 col-12 d-flex hero_right">
           <img
-            src="../../public/images/Group 620.png"
+            src="/images/Group 620.png"
             alt="..."
             className="img-fluid hero_right_img m-auto"
           />
