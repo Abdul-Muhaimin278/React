@@ -2,20 +2,17 @@ import { NavLink, useLoaderData } from "react-router-dom";
 
 export const MovieDetails = () => {
   const movieData = useLoaderData();
-  console.log(movieData);
 
   const {
     Actors,
     Poster,
     Title,
-    Ratings,
     Runtime,
     Genre,
     Type,
     Year,
     Plot,
     BoxOffice,
-    Awards,
     imdbRating,
   } = movieData;
 

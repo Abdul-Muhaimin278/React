@@ -3,7 +3,6 @@ import { Card } from "../components/UI/Card";
 
 export const Movie = () => {
   const movieData = useLoaderData();
-  console.log(movieData);
 
   return (
     <ul className="container grid grid-four--cols">

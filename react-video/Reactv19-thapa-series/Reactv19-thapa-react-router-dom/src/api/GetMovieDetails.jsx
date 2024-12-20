@@ -1,5 +1,6 @@
-export const getMoviesDatials = async ({ params }) => {
+export const getMoviesDetials = async ({ params }) => {
   const { movieID } = params;
+  console.log(params);
 
   try {
     const response = await fetch(

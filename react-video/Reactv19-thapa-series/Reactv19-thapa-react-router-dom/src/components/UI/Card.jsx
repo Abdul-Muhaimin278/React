@@ -3,7 +3,6 @@ import "./Card.css";
 
 export const Card = ({ curMovie }) => {
   const { Poster, imdbID, Title, Year } = curMovie;
-  console.log(curMovie);
 
   return (
     <li className="hero-container">

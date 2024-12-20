@@ -4,7 +4,6 @@ export const contactData = async ({ request }) => {
   try {
     const res = await request.formData();
     const data = Object.fromEntries(res);
-    console.log(data);
 
     return data;
   } catch (error) {
@@ -22,7 +21,7 @@ export const Contact = () => {
         </p>
 
         <div className="section-contact">
-          <div className=" grid grid-two--cols">
+          <div className="grid grid-two--cols">
             <div className="contact-content">
               <Form method="POST" action="/contact">
                 <div className="grid grid-two-cols mb-3">
@@ -84,4 +83,3 @@ export const Contact = () => {
     </>
   );
 };
-// "Error: You made a POST request to "/contact" but did not provide an `action` for route "0-4", so there is no way to handle the request."
