@@ -16,15 +16,15 @@ export const Header = () => {
               <p>Get Next Membership, 30-day return or refund guarantee.</p>
             </div>
             <div className="sing_in_up">
-              <NavLink to="# ">SIGN IN</NavLink>
-              <NavLink to="# ">SIGN UP</NavLink>
+              <NavLink to="/contact">SIGN IN</NavLink>
+              <NavLink to="contact">SIGN UP</NavLink>
             </div>
           </div>
         </section>
 
         <div className="container">
           <div className="navbar-brand">
-            <NavLink to="index">
+            <NavLink to="/">
               <p>Next Flix</p>
             </NavLink>
           </div>

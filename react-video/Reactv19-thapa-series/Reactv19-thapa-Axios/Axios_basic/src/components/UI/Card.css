@@ -1,0 +1,60 @@
+/* Card Component Styles */
+.card {
+  width: 300px;
+  background-color: var(--backgroundSecondary);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card__image-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.card__content {
+  padding: 16px;
+  text-align: center;
+}
+
+.card__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--textColor);
+  margin-bottom: 8px;
+}
+
+.card__year {
+  font-size: 1.4rem;
+  color: var(--secondaryColor);
+  margin-bottom: 16px;
+}
+
+.card__button {
+  display: inline-block;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.card__button:hover {
+  background-color: var(--buttonColor);
+}

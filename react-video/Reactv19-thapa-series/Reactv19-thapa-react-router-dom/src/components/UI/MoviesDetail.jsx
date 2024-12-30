@@ -1,7 +1,10 @@
-import { NavLink, useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 export const MovieDetails = () => {
+  const navigate = useNavigate();
   const movieData = useLoaderData();
+
+  console.log(movieData);
 
   const {
     Actors,
@@ -9,11 +12,10 @@ export const MovieDetails = () => {
     Title,
     Runtime,
     Genre,
-    Type,
-    Year,
     Plot,
     BoxOffice,
-    imdbRating,
+    Rated,
+    Ratings,
   } = movieData;
 
   const Timeline = (time) => {
@@ -24,6 +26,10 @@ export const MovieDetails = () => {
     return formattedTime;
   };
 
+  const handleGoBack = () => {
+    navigate(-1);
+  };
+
   return (
     <section className="movie-section">
       <div className="">
@@ -32,39 +38,23 @@ export const MovieDetails = () => {
             <img src={Poster} alt="Rambo" className="movie__img" />
           </div>
           <div className="movie__content">
-            <div className="movie__title">
-              <h1 className="heading__primary">
-                {Title} <i className="fas fa-fire"></i>
-              </h1>
-              <div className="movie__tag">{`#${Type}`}</div>
-              <div className="movie__tag">Year:{Year}</div>
-              <div className="movie__detail">
-                <span className="icons icons-grey">
-                  <i className="fas fa-clock"></i>
-                </span>
-                {Timeline(Runtime)}
-              </div>
-            </div>
-
-            <p className="movie__description">{Plot}</p>
-            <br />
-            <p className="movie__description">Genre: {Genre}</p>
-            <p className="movie__description">Actors: {Actors}</p>
+            <h1 className="movie__title">{Title}</h1>
             <div className="movie__details">
-              <p className="movie__detail">Rating: {imdbRating}</p>
-              <p className="movie__detail">
-                <span className="icons"></span>
-                {BoxOffice}
-              </p>
+              <span className="movie__detail">{`${Rated} / ${Timeline(
+                Runtime
+              )} / ${Genre}`}</span>
             </div>
-            <div>
-              <NavLink
-                to="/movie"
-                className="movie__tag movie__tag--2"
-                style={{ textAlign: "center", fontSize: "1.6rem" }}
-              >
+            <div className="movie__summary">
+              <p className="summary_label">Summary</p>
+              <p className="summary_plot">{Plot}</p>
+            </div>
+            <br />
+            <p className="movie__actors">{Actors}</p>
+            <p className="movie__detail">Box office: {BoxOffice}</p>
+            <div className="movie__back">
+              <button className="back_btn" onClick={handleGoBack}>
                 Go Back
-              </NavLink>
+              </button>
             </div>
           </div>
         </figure>

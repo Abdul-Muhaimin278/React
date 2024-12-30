@@ -1,14 +1,18 @@
-export const getMoviesData = async () => {
+export const getMoviesData = async (search) => {
   try {
+    const API_KEY = import.meta.env.VITE_API_KEY;
     const response = await fetch(
-      `http://www.omdbapi.com/?apikey=${
-        import.meta.env.VITE_API_KEY
-      }&s=star wars`
+      `https://www.omdbapi.com/?apikey=${API_KEY}&s=${search}`
     );
 
-    const data = response.json();
+    if (!response.ok) {
+      throw new Error(`Error fetching data: ${response.statusText}`);
+    }
+
+    const data = await response.json();
     return data;
   } catch (err) {
-    console.error(err);
+    console.error("Failed to fetch movies:", err);
+    return null;
   }
 };

@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "site": "pokemon-app-213f9",
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

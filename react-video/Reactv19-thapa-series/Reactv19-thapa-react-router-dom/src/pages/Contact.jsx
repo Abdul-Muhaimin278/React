@@ -15,7 +15,7 @@ export const Contact = () => {
   return (
     <>
       <section className="container ">
-        <h2 className="section-common--heading">contact us</h2>
+        <h2 className="section-common--heading">Contact us</h2>
         <p className="section-common--subheading">
           Get in touch with us. We are always here to help you.
         </p>

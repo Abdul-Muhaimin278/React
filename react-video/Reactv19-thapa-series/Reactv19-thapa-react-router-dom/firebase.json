@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "site": "nextflix-59ec6",
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
