@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Gradient background for a more vibrant look -->
+  <defs>
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#61dafb" />
+      <stop offset="100%" stop-color="#0a74da" />
+    </radialGradient>
+
+    <linearGradient id="flameGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbc02d" />
+      <stop offset="100%" stop-color="#f57f17" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Circle with React color gradient -->
+  <circle cx="24" cy="24" r="22" fill="url(#bgGradient)" />
+
+  <!-- Vite-inspired triangle shape with sharp edges and contrast -->
+  <polygon points="24,6 38,38 10,38" fill="#646cff" stroke="#b3b7ff" stroke-width="2" />
+
+  <!-- Firebase-inspired flame with gradient -->
+  <path d="M24 12 L29 22 L24 28 L19 22 Z" fill="url(#flameGradient)" />
+  <path d="M24 12 L21 20 L24 28 L27 20 Z" fill="#ffa000" />
+
+  <!-- Inner small circle for React -->
+  <circle cx="24" cy="24" r="5" fill="#ffffff" stroke="#646cff" stroke-width="1" />
+
+  <!-- Outer ring for emphasis -->
+  <circle cx="24" cy="24" r="21" fill="none" stroke="#fbc02d" stroke-width="2" />
+</svg>
