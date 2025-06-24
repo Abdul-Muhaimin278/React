@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable no-constant-condition */
 import { useEffect, useState } from "react";
 import { postData, updateData } from "../api/PostApi";
 
